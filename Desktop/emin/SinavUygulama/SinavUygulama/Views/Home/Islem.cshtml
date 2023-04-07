@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["title"] = "Hesaplama";
+}
+<div class="row">
+    <div class="col-6">
+        <form asp-action="Islem" asp-controller="Home" method="post">
+
+            <label for="s1" class="form-label">Sayı 1</label>
+            <input type="number" class="form-control mb-3" name="s1" id="s1" required />
+
+            <label for="s2" class="form-label">Sayı 2</label>
+            <input type="number" class="form-control mb-3" name="s2" id="s2" required />
+
+            <label for="islem">İşlem seçiniz</label>
+            <select name="islem" id="islem" class="form-control mb-3">
+                <option value="0">Toplam</option>
+                <option value="1">Çıkarma</option>
+                <option value="2">Çarpma</option>
+                <option value="3">Bölme</option>
+            </select>
+
+
+            <button type="submit" class="btn btn-primary">Hesapla</button>
+        </form>
+    </div>
+</div>

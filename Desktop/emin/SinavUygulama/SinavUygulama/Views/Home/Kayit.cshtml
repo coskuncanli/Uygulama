@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["title"] = "Üye kayıt sayfası";
+}
+@model SinavUygulama.Models.Uye;
+
+<div class="row">
+    <div class="col-4">
+        <h1 class="h4">Kayıt Formu</h1>
+        <form asp-controller="Home" asp-action="Kayit" method="post">
+            <label asp-for="Ad" class="form-label" />
+            <input asp-for="Ad" class="form-control mb-3" />
+
+            <label asp-for="Soyad" class="form-label" />
+            <input asp-for="Soyad" class="form-control mb-3" />
+
+            <label asp-for="DogumTarihi" class="form-label" />
+            <input asp-for="DogumTarihi" class="form-control mb-3" />
+
+            <label asp-for="Adres" class="form-label" />
+            <input asp-for="Adres" class="form-control mb-3" />
+
+            <button class="btn btn-primary" type="submit">Kaydet</button>
+
+        </form>
+    </div>
+</div>
